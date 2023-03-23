@@ -23,7 +23,7 @@ for i in range (0, times):
             number_2 = randrange(10)
     # Se imprime la cuenta.
     print (f"{i+1}- ¿Cuanto es {number_1} {operator} {number_2}?")
-    # Le pedimod al usuario el resultado
+    # Le pedimos al usuario el resultado
     result = input("resultado: ")
     # Se obtiene el resultado correcto de la operacion
     if operator == "+":
@@ -35,8 +35,8 @@ for i in range (0, times):
     else:
         resultado_operacion =number_1 / number_2
     # Comparamos el resultado del usuario con el correcto
-    # Si correcto se informa y se suma
-    if round(resultado_operacion, 2) == round (float(result),2):
+    # Se informa si es correcto o incorrecto y actualiza el contador de correctas
+    if round(resultado_operacion, 2) == round(float(result), 2):
        print("El resultado es correcto")
        correctos+=1
     else:
@@ -47,5 +47,5 @@ for i in range (0, times):
 end_time = datetime.now()
 # Restando las fechas obtenemos el tiempo transcurrido.
 total_time = end_time - init_time
-# Mostramos ese tiempo en segundos.
+# Mostramos ese tiempo en segundos y las respuestas correctas e incorrectas.
 print(f"\n Tardaste {total_time.seconds} segundos\n tenes {correctos} respuestas correctas y {5 - correctos} respuestas incorrectas")
