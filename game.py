@@ -36,7 +36,8 @@ for i in range (0, times):
         resultado_operacion =number_1 / number_2
     # Comparamos el resultado del usuario con el correcto
     # Se informa si es correcto o incorrecto y actualiza el contador de correctas
-    if round(resultado_operacion, 2) == round(float(result), 2):
+    # Se redondea a un solo digito decimal
+    if round(resultado_operacion, 1) == round(float(result), 1):
        print("El resultado es correcto")
        correctos+=1
     else:
